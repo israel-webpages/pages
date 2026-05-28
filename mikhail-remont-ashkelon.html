@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Михаил — ремонт квартир в Ашкелоне | Керамика, гипсокартон, покраска, сантехника, ламинат</title>
+<meta name="description" content="Ремонт квартир в Ашкелоне и по всему Центру и Югу Израиля. Керамика, гипсокартон (гевес), покраска, сантехника, ламинат. Быстро, качественно, цены умеренные. Звоните: 053-829-9336.">
+<meta name="keywords" content="ремонт квартир Ашкелон, мастер по ремонту Ашкелон, керамика гевес покраска, сантехник Ашкелон, ламинат Ашкелон, шиpуцим Ашкелон">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f0e8;
+    --bg-2:#ebe3d5;
+    --ink:#1a1a1a;
+    --ink-soft:#2d2a26;
+    --muted:#6b6560;
+    --accent:#b8471e;     /* глубокий терракот */
+    --accent-2:#d4642a;
+    --cream:#faf6ef;
+    --line:rgba(26,26,26,0.12);
+    --shadow:0 1px 2px rgba(0,0,0,0.04), 0 12px 32px -12px rgba(0,0,0,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ===== NAV ===== */
+  nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(245,240,232,0.92);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;max-width:1200px;margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:22px;
+    letter-spacing:-0.02em;
+  }
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    transition:color .2s;
+  }
+  .nav-links a:hover{color:var(--accent)}
+  .nav-phone{
+    background:var(--ink);
+    color:var(--cream);
+    padding:10px 18px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:14px;
+    transition:transform .2s, background .2s;
+  }
+  .nav-phone:hover{background:var(--accent);color:var(--cream);transform:translateY(-1px)}
+  @media(max-width:768px){
+    .nav-links a:not(.nav-phone){display:none}
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    padding:80px 0 100px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-20%;right:-10%;
+    width:600px;height:600px;
+    background:radial-gradient(circle, rgba(184,71,30,0.08), transparent 70%);
+    z-index:0;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+    z-index:1;
+  }
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero{padding:48px 0 60px}
+  }
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:24px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:32px;height:1px;
+    background:var(--accent);
+  }
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(40px,6vw,72px);
+    line-height:1.02;
+    letter-spacing:-0.03em;
+    margin-bottom:24px;
+    color:var(--ink);
+  }
+  h1 em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--accent);
+  }
+  .hero-sub{
+    font-size:18px;
+    color:var(--muted);
+    max-width:480px;
+    margin-bottom:36px;
+    line-height:1.6;
+  }
+  .cta-group{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+  .btn-primary{
+    background:var(--ink);
+    color:var(--cream);
+    padding:16px 28px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:all .25s;
+    border:none;
+    cursor:pointer;
+  }
+  .btn-primary:hover{
+    background:var(--accent);
+    transform:translateY(-2px);
+    box-shadow:var(--shadow);
+  }
+  .btn-secondary{
+    background:transparent;
+    color:var(--ink);
+    padding:16px 28px;
+    border-radius:100px;
+    font-weight:600;
+    font-size:16px;
+    text-decoration:none;
+    border:1.5px solid var(--ink);
+    transition:all .25s;
+  }
+  .btn-secondary:hover{background:var(--ink);color:var(--cream)}
+  .trust-row{
+    display:flex;gap:32px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  .trust-item{font-size:14px}
+  .trust-num{
+    font-family:'Fraunces',serif;
+    font-size:28px;
+    font-weight:600;
+    color:var(--ink);
+    display:block;
+    letter-spacing:-0.02em;
+  }
+  .trust-label{color:var(--muted);font-size:13px}
+
+  /* ===== HERO VISUAL ===== */
+  .hero-visual{
+    position:relative;
+    aspect-ratio:4/5;
+    border-radius:8px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#3a2f28,#1f1a16);
+  }
+  .hero-visual-inner{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+  }
+  .tool-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    width:100%;
+  }
+  .tool-cell{
+    aspect-ratio:1;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--cream);
+    font-size:32px;
+    transition:all .3s;
+  }
+  .tool-cell:hover{
+    background:var(--accent);
+    transform:scale(1.05);
+  }
+  .hero-badge{
+    position:absolute;
+    bottom:24px;left:24px;
+    background:var(--cream);
+    color:var(--ink);
+    padding:16px 20px;
+    border-radius:8px;
+    box-shadow:var(--shadow);
+    max-width:220px;
+  }
+  .hero-badge-title{
+    font-family:'Fraunces',serif;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .hero-badge-sub{font-size:13px;color:var(--muted)}
+
+  /* ===== SERVICES ===== */
+  .section{padding:100px 0}
+  @media(max-width:768px){.section{padding:60px 0}}
+  .section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:60px;
+    gap:40px;
+    flex-wrap:wrap;
+  }
+  h2{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(32px,4.5vw,52px);
+    line-height:1.05;
+    letter-spacing:-0.02em;
+    max-width:640px;
+  }
+  h2 em{font-style:italic;color:var(--accent);font-weight:400}
+  .section-sub{color:var(--muted);max-width:360px;font-size:16px}
+
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .service{
+    background:var(--bg);
+    padding:40px 32px;
+    transition:background .3s;
+    position:relative;
+  }
+  .service:hover{background:var(--cream)}
+  .service-num{
+    font-family:'Fraunces',serif;
+    font-size:13px;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:16px;
+    display:block;
+    letter-spacing:0.1em;
+  }
+  .service-icon{
+    font-size:36px;
+    margin-bottom:20px;
+    display:block;
+  }
+  .service h3{
+    font-family:'Fraunces',serif;
+    font-size:24px;
+    font-weight:600;
+    margin-bottom:12px;
+    letter-spacing:-0.01em;
+  }
+  .service p{color:var(--muted);font-size:15px;line-height:1.6}
+
+  /* ===== ABOUT / FEATURES ===== */
+  .about{
+    background:var(--ink);
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+  }
+  .about::before{
+    content:"";
+    position:absolute;
+    top:-30%;left:-10%;
+    width:500px;height:500px;
+    background:radial-gradient(circle, rgba(212,100,42,0.15), transparent 70%);
+  }
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    position:relative;
+    z-index:1;
+  }
+  @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px}}
+  .about h2{color:var(--cream)}
+  .about h2 em{color:var(--accent-2)}
+  .about-text{color:rgba(250,246,239,0.7);font-size:17px;line-height:1.7;margin-bottom:24px}
+  .features-list{list-style:none;display:flex;flex-direction:column;gap:20px}
+  .feature{
+    display:flex;
+    gap:20px;
+    padding:20px 0;
+    border-bottom:1px solid rgba(250,246,239,0.1);
+  }
+  .feature-icon{
+    flex-shrink:0;
+    width:44px;height:44px;
+    border-radius:50%;
+    background:rgba(212,100,42,0.15);
+    color:var(--accent-2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+  }
+  .feature-title{
+    font-family:'Fraunces',serif;
+    font-size:19px;
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .feature-desc{color:rgba(250,246,239,0.6);font-size:14px;line-height:1.5}
+
+  /* ===== AREAS ===== */
+  .areas{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+    gap:12px;
+    margin-top:40px;
+  }
+  .area-chip{
+    padding:12px 20px;
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:100px;
+    text-align:center;
+    font-size:14px;
+    font-weight:500;
+    transition:all .2s;
+  }
+  .area-chip:hover{
+    background:var(--ink);
+    color:var(--cream);
+    transform:translateY(-2px);
+  }
+
+  /* ===== CTA / CONTACT ===== */
+  .contact{
+    background:var(--bg-2);
+    position:relative;
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:60px;
+    align-items:start;
+  }
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+  .contact-info h2{margin-bottom:24px}
+  .contact-info p{color:var(--muted);font-size:16px;margin-bottom:32px;line-height:1.7}
+  .phone-block{
+    background:var(--cream);
+    padding:28px;
+    border-radius:12px;
+    margin-bottom:16px;
+    transition:transform .2s;
+    display:block;
+    text-decoration:none;
+    color:inherit;
+  }
+  .phone-block:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .phone-label{font-size:13px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.08em;font-weight:600}
+  .phone-number{
+    font-family:'Fraunces',serif;
+    font-size:32px;
+    font-weight:600;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+
+  form{
+    background:var(--cream);
+    padding:40px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
+  }
+  .form-title{
+    font-family:'Fraunces',serif;
+    font-size:26px;
+    font-weight:600;
+    margin-bottom:8px;
+  }
+  .form-sub{color:var(--muted);font-size:14px;margin-bottom:28px}
+  .form-group{margin-bottom:18px}
+  label{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:8px;
+    color:var(--ink-soft);
+  }
+  input,select,textarea{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    font-family:inherit;
+    font-size:15px;
+    background:var(--bg);
+    color:var(--ink);
+    transition:border-color .2s, background .2s;
+  }
+  input:focus,select:focus,textarea:focus{
+    outline:none;
+    border-color:var(--accent);
+    background:var(--cream);
+  }
+  textarea{resize:vertical;min-height:100px}
+  .submit-btn{
+    width:100%;
+    background:var(--accent);
+    color:var(--cream);
+    padding:16px;
+    border:none;
+    border-radius:100px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all .25s;
+    font-family:inherit;
+    margin-top:8px;
+  }
+  .submit-btn:hover{background:var(--ink);transform:translateY(-1px)}
+  .form-note{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink);
+    color:rgba(250,246,239,0.6);
+    padding:40px 0;
+    text-align:center;
+    font-size:14px;
+  }
+  footer a{color:var(--accent-2);text-decoration:none}
+  footer .logo{color:var(--cream);margin-bottom:12px;display:block}
+
+  /* ===== ANIMATIONS ===== */
+  .fade-up{
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp .8s ease forwards;
+  }
+  @keyframes fadeUp{
+    to{opacity:1;transform:translateY(0)}
+  }
+  .d1{animation-delay:.1s}
+  .d2{animation-delay:.2s}
+  .d3{animation-delay:.3s}
+  .d4{animation-delay:.4s}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Михаил<span>.</span>Ремонт</div>
+    <div class="nav-links">
+      <a href="#services">Услуги</a>
+      <a href="#about">О мастере</a>
+      <a href="#areas">Районы</a>
+      <a href="tel:+972538299336" class="nav-phone">053-829-9336</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow fade-up">Ашкелон · Центр · Юг Израиля</div>
+        <h1 class="fade-up d1">Ремонт квартир <em>быстро,<br>качественно</em><br>и без переплат</h1>
+        <p class="hero-sub fade-up d2">Мастер с многолетним опытом. Выполняю работы любой сложности — от замены крана до ремонта «под ключ». Работаю по всему Центру и Югу страны.</p>
+        <div class="cta-group fade-up d3">
+          <a href="tel:+972538299336" class="btn-primary">
+            Позвонить сейчас
+            <span>→</span>
+          </a>
+          <a href="#contact" class="btn-secondary">Оставить заявку</a>
+        </div>
+        <div class="trust-row fade-up d4">
+          <div class="trust-item">
+            <span class="trust-num">6600+</span>
+            <span class="trust-label">обращений</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">780+</span>
+            <span class="trust-label">в избранном</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num">10+</span>
+            <span class="trust-label">лет опыта</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-up d2">
+        <div class="hero-visual-inner">
+          <div class="tool-grid">
+            <div class="tool-cell">🔨</div>
+            <div class="tool-cell">🎨</div>
+            <div class="tool-cell">🪛</div>
+            <div class="tool-cell">🧱</div>
+            <div class="tool-cell">🚿</div>
+            <div class="tool-cell">📏</div>
+            <div class="tool-cell">🔧</div>
+            <div class="tool-cell">⚡</div>
+            <div class="tool-cell">🪚</div>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <div class="hero-badge-title">Умеренные цены</div>
+          <div class="hero-badge-sub">Честная смета, без скрытых платежей</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <h2>Что <em>делаю</em></h2>
+      <p class="section-sub">Весь спектр ремонтных работ — от мелкого ремонта до полной отделки квартиры.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <span class="service-num">01</span>
+        <span class="service-icon">🧱</span>
+        <h3>Керамика</h3>
+        <p>Укладка плитки и керамогранита в кухне, ванной, санузле. Ровные швы, аккуратная затирка.</p>
+      </div>
+      <div class="service">
+        <span class="service-num">02</span>
+        <span class="service-icon">📐</span>
+        <h3>Гипсокартон (гевес)</h3>
+        <p>Перегородки, потолки, арки, ниши. Выравнивание стен под покраску или обои.</p>
+      </div>
+      <div class="service">
+        <span class="service-num">03</span>
+        <span class="service-icon">🎨</span>
+        <h3>Покраска</h3>
+        <p>Подготовка поверхностей, грунтовка, покраска стен и потолков. Без разводов и пыли.</p>
+      </div>
+      <div class="service">
+        <span class="service-num">04</span>
+        <span class="service-icon">🚿</span>
+        <h3>Сантехника</h3>
+        <p>Замена труб, смесителей, унитазов. Подключение стиральных и посудомоечных машин.</p>
+      </div>
+      <div class="service">
+        <span class="service-num">05</span>
+        <span class="service-icon">🪵</span>
+        <h3>Ламинат</h3>
+        <p>Укладка ламината и паркетной доски. Подготовка основания, монтаж плинтусов.</p>
+      </div>
+      <div class="service">
+        <span class="service-num">06</span>
+        <span class="service-icon">✨</span>
+        <h3>Ремонт «под ключ»</h3>
+        <p>Комплексный ремонт квартиры — от демонтажа до финишной отделки. Один мастер — один результат.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow" style="color:var(--accent-2)">О мастере</div>
+        <h2>Работаю честно — <em>так, как для себя</em></h2>
+        <p class="about-text">Меня зовут Михаил. Занимаюсь ремонтом квартир не первый год — за это время обратилось более 6 600 клиентов, 780+ добавили мою страницу в избранное. Работаю один или со своей бригадой — в зависимости от объёма.</p>
+        <p class="about-text">Говорю с клиентом на одном языке (русский, иврит). Не исчезаю посреди работы, не завышаю смету по ходу дела. Если есть вопрос — проще позвонить и всё обсудить за пять минут.</p>
+      </div>
+      <div>
+        <ul class="features-list">
+          <li class="feature">
+            <div class="feature-icon">✓</div>
+            <div>
+              <div class="feature-title">Умеренные цены</div>
+              <div class="feature-desc">Смета обсуждается заранее. Никаких сюрпризов по ходу работы.</div>
+            </div>
+          </li>
+          <li class="feature">
+            <div class="feature-icon">⚡</div>
+            <div>
+              <div class="feature-title">Быстро и по срокам</div>
+              <div class="feature-desc">Договариваемся о сроке — и я его держу. Без «завтра-послезавтра».</div>
+            </div>
+          </li>
+          <li class="feature">
+            <div class="feature-icon">🛠</div>
+            <div>
+              <div class="feature-title">Любая сложность</div>
+              <div class="feature-desc">Мелкий ремонт, частичная отделка, ремонт «под ключ» — всё это.</div>
+            </div>
+          </li>
+          <li class="feature">
+            <div class="feature-icon">🗣</div>
+            <div>
+              <div class="feature-title">Русский и иврит</div>
+              <div class="feature-desc">Никаких проблем с общением и пониманием задачи.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section" id="areas">
+  <div class="container">
+    <div class="section-head">
+      <h2>География <em>работы</em></h2>
+      <p class="section-sub">Базируюсь в Ашкелоне. Выезжаю по всему Центру и Югу Израиля.</p>
+    </div>
+    <div class="areas">
+      <div class="area-chip">Ашкелон</div>
+      <div class="area-chip">Ашдод</div>
+      <div class="area-chip">Беэр-Шева</div>
+      <div class="area-chip">Ришон ле-Цион</div>
+      <div class="area-chip">Реховот</div>
+      <div class="area-chip">Нес-Циона</div>
+      <div class="area-chip">Явне</div>
+      <div class="area-chip">Холон</div>
+      <div class="area-chip">Бат-Ям</div>
+      <div class="area-chip">Тель-Авив</div>
+      <div class="area-chip">Кирьят-Гат</div>
+      <div class="area-chip">Нетивот</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="eyebrow">Связаться</div>
+        <h2>Позвоните <em>или напишите</em> — ответ сразу</h2>
+        <p>Проще всего — позвонить. Расскажете, что нужно, я задам пару уточняющих вопросов и скажу примерную стоимость и сроки. Бесплатно и без обязательств.</p>
+
+        <a href="tel:+972538299336" class="phone-block">
+          <div class="phone-label">Основной телефон</div>
+          <div class="phone-number">053-829-9336</div>
+        </a>
+        <a href="tel:+972527358062" class="phone-block">
+          <div class="phone-label">Дополнительный</div>
+          <div class="phone-number">052-735-8062</div>
+        </a>
+      </div>
+
+      <form onsubmit="handleSubmit(event)">
+        <div class="form-title">Оставить заявку</div>
+        <div class="form-sub">Перезвоню в течение часа в рабочее время.</div>
+
+        <div class="form-group">
+          <label for="name">Как к вам обращаться</label>
+          <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" name="phone" placeholder="05X-XXX-XXXX" required>
+        </div>
+
+        <div class="form-group">
+          <label for="service">Что нужно сделать</label>
+          <select id="service" name="service" required>
+            <option value="">Выберите услугу</option>
+            <option>Керамика / плитка</option>
+            <option>Гипсокартон (гевес)</option>
+            <option>Покраска</option>
+            <option>Сантехника</option>
+            <option>Ламинат / напольные покрытия</option>
+            <option>Ремонт «под ключ»</option>
+            <option>Другое / мелкий ремонт</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="city">Город</label>
+          <input type="text" id="city" name="city" placeholder="Ашкелон, Ашдод, Беэр-Шева…">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Комментарий (необязательно)</label>
+          <textarea id="message" name="message" placeholder="Опишите задачу: площадь, сроки, особенности"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Отправить заявку</button>
+        <div class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="logo">Михаил<span>.</span>Ремонт</div>
+    <div>Ашкелон · Центр и Юг Израиля · <a href="tel:+972538299336">053-829-9336</a></div>
+    <div style="margin-top:16px;font-size:12px;opacity:0.6">© 2026 · Ремонт квартир любой сложности</div>
+  </div>
+</footer>
+
+<script>
+  function handleSubmit(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const name = data.get('name');
+    alert(`Спасибо, ${name}! Заявка получена. Михаил свяжется с вами в ближайшее время.\n\nВ боевой версии данные уйдут на телефон/WhatsApp/email мастера.`);
+    form.reset();
+  }
+</script>
+
+</body>
+</html>
