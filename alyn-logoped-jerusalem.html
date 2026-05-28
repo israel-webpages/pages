@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Логопед в Иерусалиме | Больница АЛИН | 30 лет опыта | Русскоязычный специалист</title>
+<meta name="description" content="Русскоязычный логопед с 30-летним опытом в больнице АЛИН, Иерусалим. Работаем с детьми с рождения: задержка речи, нарушения коммуникации, кормление. Принимаем больничные кассы.">
+<meta name="keywords" content="логопед Иерусалим, логопед русскоязычный Израиль, логопед АЛИН, задержка речи ребёнок, речевая терапия Иерусалим, דיבור וקשר ילדים">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --lavender: #e8e4f4;
+  --lavender-mid: #c5bce8;
+  --purple: #7b6bbf;
+  --purple-deep: #4a3d8f;
+  --sage: #d4e8df;
+  --sage-dark: #5a9a7a;
+  --ink: #1e1b2e;
+  --ink-soft: #3d3a55;
+  --muted: #7a7898;
+  --cream: #faf9ff;
+  --white: #ffffff;
+  --line: rgba(123,107,191,0.15);
+  --shadow-soft: 0 4px 24px rgba(74,61,143,0.08);
+  --shadow-med: 0 8px 40px rgba(74,61,143,0.14);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(250,249,255,0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1160px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700; color: var(--purple-deep);
+  text-decoration: none;
+}
+.logo span { color: var(--sage-dark); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--ink-soft);
+  text-decoration: none; transition: color .2s;
+}
+.nav-links a:hover { color: var(--purple); }
+.nav-cta {
+  background: var(--purple-deep); color: var(--white) !important;
+  padding: 10px 20px; border-radius: 100px; font-weight: 600 !important;
+  transition: all .2s !important;
+}
+.nav-cta:hover { background: var(--purple) !important; transform: translateY(-1px); }
+@media(max-width:768px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  min-height: 92vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media(max-width:900px){ .hero { grid-template-columns: 1fr; min-height: auto; } }
+
+.hero-left {
+  padding: 80px 60px 80px 40px;
+  max-width: 640px;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+@media(max-width:1100px){ .hero-left { padding: 60px 40px; } }
+@media(max-width:900px){ .hero-left { padding: 48px 24px 40px; max-width: 100%; } }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--lavender); color: var(--purple-deep);
+  padding: 8px 16px; border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+  margin-bottom: 28px; width: fit-content;
+  animation: fadeUp .7s ease both;
+}
+.badge-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--sage-dark);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 4.5vw, 60px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 24px;
+  animation: fadeUp .7s .1s ease both;
+}
+h1 em { font-style: italic; color: var(--purple); }
+
+.hero-desc {
+  font-size: 17px; color: var(--ink-soft);
+  line-height: 1.75; max-width: 480px;
+  margin-bottom: 36px;
+  animation: fadeUp .7s .2s ease both;
+}
+
+.cta-row {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 48px;
+  animation: fadeUp .7s .3s ease both;
+}
+.btn-main {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--purple-deep); color: var(--white);
+  padding: 16px 28px; border-radius: 100px;
+  font-size: 16px; font-weight: 600; text-decoration: none;
+  transition: all .25s; border: none; cursor: pointer;
+  font-family: inherit;
+}
+.btn-main:hover { background: var(--purple); transform: translateY(-2px); box-shadow: var(--shadow-med); }
+.btn-out {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent; color: var(--purple-deep);
+  padding: 16px 28px; border-radius: 100px;
+  font-size: 16px; font-weight: 600; text-decoration: none;
+  border: 2px solid var(--lavender-mid);
+  transition: all .25s;
+}
+.btn-out:hover { border-color: var(--purple); background: var(--lavender); }
+
+.stats-row {
+  display: flex; gap: 36px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+  animation: fadeUp .7s .4s ease both;
+}
+.stat-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 700;
+  color: var(--purple-deep); display: block;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+/* Hero right — decorative */
+.hero-right {
+  position: relative;
+  background: linear-gradient(135deg, var(--lavender) 0%, #ddd8f5 100%);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  padding: 60px 40px;
+}
+@media(max-width:900px){ .hero-right { min-height: 320px; padding: 40px 24px; } }
+.hero-right::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(90,154,122,0.2), transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(123,107,191,0.15), transparent 50%);
+}
+.hero-card {
+  position: relative; z-index: 1;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 36px 32px;
+  box-shadow: var(--shadow-med);
+  max-width: 340px; width: 100%;
+}
+.hero-card-top {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.hero-avatar {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--lavender-mid), var(--purple));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; flex-shrink: 0;
+}
+.hero-card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--ink); margin-bottom: 2px;
+}
+.hero-card-role { font-size: 13px; color: var(--muted); font-weight: 500; }
+.card-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.card-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14px; color: var(--ink-soft); line-height: 1.4;
+}
+.card-icon {
+  width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.ci-green { background: var(--sage); }
+.ci-purple { background: var(--lavender); }
+.hero-kassot {
+  margin-top: 20px; padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex; align-items: center; gap: 10px;
+}
+.kassot-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, #edf7f2, #d4e8df);
+  color: var(--sage-dark); padding: 8px 14px; border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+}
+
+/* ── SECTION BASE ── */
+section { padding: 96px 0; }
+@media(max-width:768px){ section { padding: 64px 0; } }
+.container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--purple);
+  margin-bottom: 16px; display: block;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700; line-height: 1.15;
+  letter-spacing: -0.02em; color: var(--ink);
+  margin-bottom: 20px;
+}
+h2 em { font-style: italic; color: var(--purple); font-weight: 500; }
+
+/* ── SERVICES ── */
+.services { background: var(--white); }
+.services-intro {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: center;
+  margin-bottom: 64px;
+}
+@media(max-width:900px){ .services-intro { grid-template-columns: 1fr; gap: 24px; } }
+.services-intro p { font-size: 16px; color: var(--ink-soft); line-height: 1.75; }
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.service-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 32px 28px;
+  transition: all .3s;
+  position: relative; overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--sage-dark));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .3s;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-med); border-color: var(--lavender-mid); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-emoji { font-size: 36px; margin-bottom: 16px; display: block; }
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700;
+  margin-bottom: 10px; color: var(--ink);
+}
+.service-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+/* ── ABOUT ── */
+.about {
+  background: var(--purple-deep);
+  color: var(--white); position: relative; overflow: hidden;
+}
+.about::before {
+  content: '';
+  position: absolute; top: -20%; right: -15%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(197,188,232,0.12), transparent 70%);
+}
+.about::after {
+  content: '';
+  position: absolute; bottom: -20%; left: -10%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(90,154,122,0.1), transparent 70%);
+}
+.about-grid {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 80px; align-items: center; position: relative; z-index: 1;
+}
+@media(max-width:900px){ .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+.about .section-label { color: var(--lavender-mid); }
+.about h2 { color: var(--white); }
+.about h2 em { color: var(--lavender-mid); }
+.about-text {
+  font-size: 16px; line-height: 1.8;
+  color: rgba(255,255,255,0.75); margin-bottom: 20px;
+}
+.about-features { display: flex; flex-direction: column; gap: 0; }
+.about-feat {
+  display: flex; gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.about-feat:first-child { padding-top: 0; }
+.feat-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  border-radius: 12px;
+  background: rgba(197,188,232,0.15);
+  display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.feat-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px; font-weight: 700;
+  color: var(--white); margin-bottom: 4px;
+}
+.feat-desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+/* ── AREAS ── */
+.areas { background: var(--lavender); }
+.areas-inner {
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: 60px; align-items: start;
+}
+@media(max-width:900px){ .areas-inner { grid-template-columns: 1fr; gap: 32px; } }
+.areas-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.chip {
+  padding: 10px 20px;
+  background: var(--white); color: var(--purple-deep);
+  border-radius: 100px; font-size: 14px; font-weight: 500;
+  border: 1.5px solid var(--lavender-mid);
+  transition: all .2s; cursor: default;
+}
+.chip:hover { background: var(--purple-deep); color: var(--white); border-color: var(--purple-deep); transform: translateY(-2px); }
+.chip.main { background: var(--purple-deep); color: var(--white); border-color: var(--purple-deep); }
+
+/* ── CONTACT ── */
+.contact { background: var(--white); }
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 60px; align-items: start;
+}
+@media(max-width:900px){ .contact-grid { grid-template-columns: 1fr; } }
+.contact-text { font-size: 16px; color: var(--ink-soft); line-height: 1.75; margin-bottom: 32px; }
+
+.contact-block {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 16px;
+  text-decoration: none; color: inherit;
+  display: block; transition: all .25s;
+}
+.contact-block:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); border-color: var(--lavender-mid); }
+.contact-block-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
+.contact-block-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 700;
+  color: var(--purple-deep);
+}
+.contact-block-sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+.contact-form {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 40px;
+}
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px; font-weight: 700;
+  color: var(--ink); margin-bottom: 6px;
+}
+.form-sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.form-row { margin-bottom: 16px; }
+label { display: block; font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-bottom: 7px; }
+input, select, textarea {
+  width: 100%; padding: 13px 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  font-family: inherit; font-size: 15px;
+  background: var(--white); color: var(--ink);
+  transition: border-color .2s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none; border-color: var(--purple);
+}
+textarea { resize: vertical; min-height: 96px; }
+.submit {
+  width: 100%;
+  background: var(--purple-deep); color: var(--white);
+  padding: 16px; border: none; border-radius: 100px;
+  font-family: inherit; font-size: 16px; font-weight: 600;
+  cursor: pointer; margin-top: 8px; transition: all .25s;
+}
+.submit:hover { background: var(--purple); transform: translateY(-1px); }
+.form-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 12px; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.5);
+  padding: 40px 0;
+  text-align: center; font-size: 14px;
+}
+footer .logo { color: var(--white); text-decoration: none; display: inline-block; margin-bottom: 12px; }
+footer a { color: var(--lavender-mid); text-decoration: none; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">АЛИН<span>·</span>Логопед</a>
+    <div class="nav-links">
+      <a href="#services">Услуги</a>
+      <a href="#about">О нас</a>
+      <a href="#contact">Записаться</a>
+      <a href="tel:026494277" class="nav-cta">☎ 02-649-4277</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left container" style="max-width:640px; padding-left:clamp(24px,4vw,60px)">
+    <div class="badge"><span class="badge-dot"></span>Иерусалим · Больница АЛИН</div>
+    <h1>Логопед для вашего<br>ребёнка — <em>на русском,</em><br>с заботой</h1>
+    <p class="hero-desc">Более 30 лет помогаем детям с самого раннего возраста научиться общаться, говорить и развиваться. Принимаем с нескольких месяцев жизни. Работаем с больничными кассами.</p>
+    <div class="cta-row">
+      <a href="tel:026494277" class="btn-main">Позвонить → 02-649-4277</a>
+      <a href="#contact" class="btn-out">Оставить заявку</a>
+    </div>
+    <div class="stats-row">
+      <div>
+        <span class="stat-val">30+</span>
+        <span class="stat-label">лет опыта</span>
+      </div>
+      <div>
+        <span class="stat-val">7000+</span>
+        <span class="stat-label">обращений</span>
+      </div>
+      <div>
+        <span class="stat-val">828+</span>
+        <span class="stat-label">в избранном</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hero-card-top">
+        <div class="hero-avatar">🗣</div>
+        <div>
+          <div class="hero-card-name">Логопеды АЛИН</div>
+          <div class="hero-card-role">Иерусалим · Реабилитационный центр</div>
+        </div>
+      </div>
+      <ul class="card-list">
+        <li class="card-item">
+          <div class="card-icon ci-green">👶</div>
+          <div>Принимаем с нескольких месяцев жизни</div>
+        </li>
+        <li class="card-item">
+          <div class="card-icon ci-purple">💬</div>
+          <div>Задержка речи, нарушения коммуникации, кормление</div>
+        </li>
+        <li class="card-item">
+          <div class="card-icon ci-green">🖥</div>
+          <div>Заместительная коммуникация — от карточек до hi-tech</div>
+        </li>
+        <li class="card-item">
+          <div class="card-icon ci-purple">🇷🇺</div>
+          <div>Занятия на русском языке</div>
+        </li>
+      </ul>
+      <div class="hero-kassot">
+        <span class="kassot-badge">✓ Работаем с больничными кассами</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-intro reveal">
+      <div>
+        <span class="section-label">Что мы лечим</span>
+        <h2>Помогаем детям<br><em>найти свой голос</em></h2>
+      </div>
+      <p>В больнице АЛИН — ведущем реабилитационном центре для детей и подростков — накоплен огромный опыт работы во всех областях развития речи и коммуникации. Каждый ребёнок уникален, и мы подбираем подход индивидуально.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-emoji">🗣</span>
+        <h3>Задержка речи</h3>
+        <p>Диагностика и коррекция отставания в развитии речи. Работаем с детьми с самого раннего возраста.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-emoji">💬</span>
+        <h3>Нарушения коммуникации</h3>
+        <p>Помогаем ребёнку научиться общаться — ведь коммуникация начинается раньше, чем речь.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-emoji">🍼</span>
+        <h3>Нарушения кормления</h3>
+        <p>Специализированная помощь при трудностях с кормлением у младенцев и маленьких детей.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-emoji">🖥</span>
+        <h3>Заместительная коммуникация</h3>
+        <p>Для неговорящих детей — карточковые словари, компьютерные программы и высокотехнологичные устройства.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-emoji">👨‍👩‍👦</span>
+        <h3>Доречевая коммуникация</h3>
+        <p>Помогаем ребёнку овладеть навыками общения до появления первых слов.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-emoji">🏥</span>
+        <h3>Консультация и диагностика</h3>
+        <p>Первичная консультация для оценки речевого развития. Работаем с больничными кассами.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="section-label">О нас</span>
+        <h2>Больница АЛИН —<br><em>ведущий центр</em><br>реабилитации</h2>
+        <p class="about-text">Мы — логопеды реабилитационного центра АЛИН в Иерусалиме. За более чем 30 лет работы через наши руки прошли тысячи детей с самыми разными речевыми особенностями.</p>
+        <p class="about-text">Консультации и занятия проводятся на русском языке. Принимаем детей с самого раннего возраста — буквально с нескольких месяцев — и работаем со всем спектром нарушений развития речи и коммуникации.</p>
+        <p class="about-text">Мы принимаем все основные больничные кассы, что делает нашу помощь доступной для большинства семей.</p>
+      </div>
+      <div class="about-features reveal">
+        <div class="about-feat">
+          <div class="feat-icon">🎯</div>
+          <div>
+            <div class="feat-title">Индивидуальный подход</div>
+            <div class="feat-desc">Каждый ребёнок получает программу, разработанную под его конкретные потребности.</div>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">🌱</div>
+          <div>
+            <div class="feat-title">Ранняя помощь</div>
+            <div class="feat-desc">Принимаем с нескольких месяцев жизни — чем раньше начать, тем лучше результат.</div>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">🏆</div>
+          <div>
+            <div class="feat-title">30+ лет опыта</div>
+            <div class="feat-desc">Один из ведущих реабилитационных центров страны с проверенной репутацией.</div>
+          </div>
+        </div>
+        <div class="about-feat">
+          <div class="feat-icon">💳</div>
+          <div>
+            <div class="feat-title">Больничные кассы</div>
+            <div class="feat-desc">Работаем с куппат-холим — финансовая доступность для всех семей.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="areas-inner">
+      <div class="reveal">
+        <span class="section-label">Где мы работаем</span>
+        <h2>Иерусалим<br>и <em>округ</em></h2>
+        <p style="color:var(--ink-soft); font-size:16px; line-height:1.75; margin-top:16px">Центр расположен в больнице АЛИН в Иерусалиме. Принимаем пациентов со всего Иерусалимского округа.</p>
+        <div style="margin-top:24px">
+          <a href="http://alyn.org.ru" target="_blank" class="btn-out" style="display:inline-flex">Сайт больницы АЛИН →</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="areas-chips">
+          <div class="chip main">Иерусалим</div>
+          <div class="chip">Маале-Адумим</div>
+          <div class="chip">Бейт-Шемеш</div>
+          <div class="chip">Гиват-Зеев</div>
+          <div class="chip">Мевасерет-Цион</div>
+          <div class="chip">Эфрат</div>
+          <div class="chip">Весь Иерусалимский округ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="section-label">Записаться</span>
+        <h2>Свяжитесь<br>с <em>нами</em></h2>
+        <p class="contact-text">Позвоните или оставьте заявку — мы свяжемся с вами, ответим на вопросы и запишем на первичную консультацию.</p>
+
+        <a href="tel:026494277" class="contact-block">
+          <div class="contact-block-label">Телефон</div>
+          <div class="contact-block-val">02-649-4277</div>
+          <div class="contact-block-sub">Больница АЛИН, Иерусалим</div>
+        </a>
+
+        <a href="http://alyn.org.ru" target="_blank" class="contact-block">
+          <div class="contact-block-label">Сайт</div>
+          <div class="contact-block-val" style="font-size:20px">alyn.org.ru</div>
+          <div class="contact-block-sub">Подробная информация о центре</div>
+        </a>
+      </div>
+
+      <div class="contact-form reveal">
+        <div class="form-title">Оставить заявку</div>
+        <div class="form-sub">Перезвоним в рабочее время и ответим на все вопросы.</div>
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <label>Ваше имя</label>
+            <input type="text" name="name" placeholder="Имя родителя" required>
+          </div>
+          <div class="form-row">
+            <label>Телефон</label>
+            <input type="tel" name="phone" placeholder="05X-XXX-XXXX" required>
+          </div>
+          <div class="form-row">
+            <label>Возраст ребёнка</label>
+            <select name="age">
+              <option value="">Выберите</option>
+              <option>До 1 года</option>
+              <option>1–2 года</option>
+              <option>2–3 года</option>
+              <option>3–5 лет</option>
+              <option>5–7 лет</option>
+              <option>Старше 7 лет</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>С чем нужна помощь</label>
+            <select name="issue">
+              <option value="">Выберите</option>
+              <option>Задержка речи</option>
+              <option>Нарушения коммуникации</option>
+              <option>Нарушения кормления</option>
+              <option>Заместительная коммуникация</option>
+              <option>Первичная консультация / не знаю</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Комментарий</label>
+            <textarea name="comment" placeholder="Расскажите подробнее о ситуации..."></textarea>
+          </div>
+          <button type="submit" class="submit">Отправить заявку</button>
+          <div class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="#" class="logo">АЛИН<span style="color:var(--sage-dark)">·</span>Логопед</a>
+    <div>Иерусалим · Больница АЛИН · <a href="tel:026494277">02-649-4277</a> · <a href="http://alyn.org.ru" target="_blank">alyn.org.ru</a></div>
+    <div style="margin-top:12px;font-size:12px;opacity:.5">© 2026 · Логопедический центр больницы АЛИН, Иерусалим</div>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => obs.observe(r));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const name = e.target.name.value;
+    alert(`Спасибо, ${name}! Заявка принята. Специалисты АЛИН свяжутся с вами в ближайшее рабочее время.`);
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
