@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Промышленный альпинист и арборист | Север Израиля | 13 лет опыта | Vysot-nik</title>
+<meta name="description" content="Промышленный альпинист и арборист на Севере Израиля. 13 лет опыта на верёвках: фасадные работы, спил деревьев, подъём негабарита, алмазное бурение, монтаж на высоте. Тел: 055-770-8200.">
+<meta name="keywords" content="промышленный альпинист Израиль, арборист Север Израиля, спил деревьев Хайфа, фасадные работы высота, работы на высоте Кирьят Биалик, альпинист Хайфа">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void: #080c0f;
+  --deep: #0d1318;
+  --mid: #141c22;
+  --surface: #1c262f;
+  --orange: #f05a1a;
+  --orange2: #ff7a3d;
+  --orange-dim: rgba(240,90,26,0.12);
+  --sky: #2a9fd6;
+  --white: #eef2f5;
+  --muted: #7a8a95;
+  --line: rgba(238,242,245,0.08);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--void);
+  color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(8,12,15,0.96);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+.logo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--white); text-decoration: none;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.logo span { color: var(--orange); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta {
+  background: var(--orange) !important; color: #fff !important;
+  padding: 9px 20px; border-radius: 4px;
+  font-weight: 600 !important; transition: all .2s !important;
+}
+.nav-cta:hover { background: var(--orange2) !important; }
+@media(max-width:768px){.nav-links a:not(.nav-cta){display:none}}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  position: relative; overflow: hidden;
+  display: flex; align-items: flex-end;
+  padding-bottom: 80px;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 90% 10%, rgba(240,90,26,0.1), transparent 60%),
+    radial-gradient(ellipse 50% 70% at 5% 90%, rgba(42,159,214,0.06), transparent 60%),
+    linear-gradient(180deg, var(--deep) 0%, var(--void) 70%);
+}
+/* Rope visual element */
+.rope {
+  position: absolute; top: 0; right: 18%;
+  width: 2px; height: 100%;
+  background: linear-gradient(180deg, transparent, rgba(240,90,26,0.3) 20%, rgba(240,90,26,0.6) 50%, rgba(240,90,26,0.2) 80%, transparent);
+  z-index: 1;
+}
+.rope::after {
+  content: '⬡';
+  position: absolute; top: 30%;
+  font-size: 28px; color: var(--orange);
+  left: 50%; transform: translateX(-50%);
+  filter: drop-shadow(0 0 12px rgba(240,90,26,0.8));
+  animation: bobble 3s ease-in-out infinite;
+}
+@keyframes bobble {
+  0%,100%{ transform: translateX(-50%) translateY(0); }
+  50%{ transform: translateX(-50%) translateY(20px); }
+}
+.rope2 {
+  position: absolute; top: 0; right: calc(18% + 40px);
+  width: 1px; height: 60%;
+  background: linear-gradient(180deg, transparent, rgba(238,242,245,0.08) 40%, transparent);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  border: 1px solid rgba(240,90,26,0.3);
+  background: var(--orange-dim);
+  padding: 7px 16px; border-radius: 3px;
+  font-size: 12px; font-weight: 600; color: var(--orange2);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 28px;
+  animation: fadeUp .8s ease both;
+}
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 700; line-height: 0.9;
+  letter-spacing: -0.01em; text-transform: uppercase;
+  color: var(--white); margin-bottom: 28px;
+  animation: fadeUp .8s .1s ease both;
+}
+h1 .orange { color: var(--orange); }
+h1 .outline {
+  -webkit-text-stroke: 1.5px rgba(238,242,245,0.3);
+  color: transparent;
+}
+.hero-desc {
+  font-size: 17px; color: var(--muted);
+  max-width: 560px; line-height: 1.75;
+  margin-bottom: 40px;
+  animation: fadeUp .8s .2s ease both;
+}
+.hero-desc strong { color: var(--white); font-weight: 600; }
+.hero-ctas {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 60px;
+  animation: fadeUp .8s .3s ease both;
+}
+.btn-fire {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--orange); color: #fff;
+  padding: 16px 32px; border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; font-weight: 600; text-decoration: none;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  transition: all .25s; border: none; cursor: pointer;
+}
+.btn-fire:hover { background: var(--orange2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(240,90,26,0.35); }
+.btn-wire {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: transparent; color: var(--white);
+  padding: 16px 32px; border-radius: 4px;
+  font-size: 15px; font-weight: 500; text-decoration: none;
+  border: 1px solid var(--line); transition: all .25s;
+}
+.btn-wire:hover { border-color: var(--orange); color: var(--orange); }
+
+.stats-strip {
+  display: flex; gap: 0;
+  border: 1px solid var(--line);
+  width: fit-content;
+  animation: fadeUp .8s .4s ease both;
+}
+@media(max-width:600px){ .stats-strip { flex-wrap: wrap; width: 100%; } }
+.strip-stat {
+  padding: 18px 32px;
+  border-right: 1px solid var(--line);
+}
+.strip-stat:last-child { border-right: none; }
+.sv {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px; font-weight: 700; color: var(--orange);
+  display: block; line-height: 1;
+}
+.sl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+/* SECTION */
+.section { padding: 96px 0; }
+@media(max-width:768px){ .section { padding: 64px 0; } }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.eyebrow {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--orange);
+  margin-bottom: 14px; display: block;
+}
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 700; text-transform: uppercase;
+  line-height: 1; letter-spacing: 0.01em; color: var(--white);
+  margin-bottom: 16px;
+}
+h2 .o { color: var(--orange); }
+.s-desc { font-size: 16px; color: var(--muted); max-width: 480px; line-height: 1.7; }
+
+/* SERVICES */
+.services { background: var(--deep); }
+.srv-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 56px; align-items: end; }
+@media(max-width:768px){ .srv-head { grid-template-columns: 1fr; gap: 20px; } }
+.srv-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+@media(max-width:900px){ .srv-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:500px){ .srv-grid { grid-template-columns: 1fr; } }
+.srv {
+  background: var(--mid); padding: 36px 28px;
+  position: relative; overflow: hidden;
+  transition: background .3s;
+}
+.srv::before {
+  content: attr(data-num);
+  position: absolute; top: 16px; right: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 64px; font-weight: 700;
+  color: rgba(238,242,245,0.03);
+  line-height: 1;
+}
+.srv:hover { background: var(--surface); }
+.srv:hover .srv-icon { color: var(--orange); }
+.srv-icon { font-size: 36px; margin-bottom: 16px; display: block; transition: color .3s; }
+.srv h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px; font-weight: 600; text-transform: uppercase;
+  color: var(--white); margin-bottom: 10px; letter-spacing: 0.03em;
+}
+.srv p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+/* ABOUT */
+.about { background: var(--void); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+@media(max-width:900px){ .about-grid { grid-template-columns: 1fr; gap: 48px; } }
+.quote-block {
+  border-left: 3px solid var(--orange);
+  padding: 24px 0 24px 28px;
+  margin: 28px 0;
+  font-size: 19px; font-weight: 500; color: var(--white);
+  line-height: 1.5; font-style: italic;
+}
+.about-text { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 18px; }
+.lang-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.lang-chip {
+  padding: 8px 16px;
+  border: 1px solid var(--line); border-radius: 100px;
+  font-size: 13px; font-weight: 500; color: var(--muted);
+}
+.lang-chip.active { border-color: var(--orange); color: var(--orange); background: var(--orange-dim); }
+
+.about-feats { display: flex; flex-direction: column; gap: 0; }
+.af {
+  display: flex; gap: 18px; align-items: flex-start;
+  padding: 22px 0; border-bottom: 1px solid var(--line);
+}
+.af:last-child { border-bottom: none; }
+.af-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  border: 1px solid var(--line); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+  transition: all .25s;
+}
+.af:hover .af-icon { border-color: var(--orange); background: var(--orange-dim); }
+.af-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px; font-weight: 600; text-transform: uppercase;
+  color: var(--white); margin-bottom: 4px; letter-spacing: 0.03em;
+}
+.af-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+/* AREAS */
+.areas { background: var(--deep); }
+.areas-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.ac {
+  padding: 9px 18px; border-radius: 3px;
+  border: 1px solid var(--line);
+  font-size: 13px; color: var(--muted); font-weight: 500;
+  transition: all .2s;
+}
+.ac:hover { border-color: var(--orange); color: var(--orange); }
+.ac.main { border-color: var(--orange); color: var(--orange); background: var(--orange-dim); }
+
+/* CONTACT */
+.contact { background: var(--mid); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
+@media(max-width:900px){ .contact-grid { grid-template-columns: 1fr; } }
+.c-text { font-size: 16px; color: var(--muted); line-height: 1.75; margin: 20px 0 32px; }
+.phone-row {
+  display: flex; align-items: center; gap: 16px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 6px; padding: 22px 24px; margin-bottom: 12px;
+  text-decoration: none; color: inherit; transition: all .25s;
+}
+.phone-row:hover { border-color: var(--orange); background: var(--orange-dim); transform: translateX(4px); }
+.ph-icon {
+  width: 44px; height: 44px; flex-shrink: 0;
+  background: var(--orange-dim); border: 1px solid rgba(240,90,26,0.2);
+  border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 20px;
+}
+.ph-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 3px; font-weight: 600; }
+.ph-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px; font-weight: 600; color: var(--orange);
+  letter-spacing: 0.03em;
+}
+.yt-btn {
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(255,0,0,0.08); border: 1px solid rgba(255,0,0,0.2);
+  border-radius: 6px; padding: 18px 24px;
+  text-decoration: none; color: #ff6b6b;
+  font-weight: 600; font-size: 15px; transition: all .25s;
+}
+.yt-btn:hover { background: rgba(255,0,0,0.15); transform: translateX(4px); }
+
+.form-box {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 40px;
+}
+.ft { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
+.fsub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+.fg { margin-bottom: 14px; }
+label { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 6px; letter-spacing: 0.08em; text-transform: uppercase; }
+input, select, textarea {
+  width: 100%; padding: 13px 16px;
+  background: var(--deep); color: var(--white);
+  border: 1px solid var(--line); border-radius: 4px;
+  font-family: 'Inter', sans-serif; font-size: 15px; transition: border-color .2s;
+}
+input::placeholder, textarea::placeholder { color: var(--muted); }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--orange); }
+select option { background: var(--deep); }
+textarea { resize: vertical; min-height: 90px; }
+.submit {
+  width: 100%; background: var(--orange); color: #fff;
+  padding: 16px; border: none; border-radius: 4px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  cursor: pointer; margin-top: 8px; transition: all .25s;
+}
+.submit:hover { background: var(--orange2); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(240,90,26,0.3); }
+.fnote { font-size: 11px; color: var(--muted); text-align: center; margin-top: 10px; }
+
+/* FOOTER */
+footer {
+  background: var(--void); border-top: 1px solid var(--line);
+  padding: 36px 0; text-align: center; font-size: 13px; color: var(--muted);
+}
+footer .logo { display: inline-block; margin-bottom: 10px; }
+footer a { color: var(--orange); text-decoration: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">Vysot<span>-</span>Nik</a>
+    <div class="nav-links">
+      <a href="#services">Услуги</a>
+      <a href="#about">Об мастере</a>
+      <a href="#contact">Контакты</a>
+      <a href="tel:0557708200" class="nav-cta">055-770-8200</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="rope"></div>
+  <div class="rope2"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🧗 Север Израиля · Кирьят-Биалик</div>
+    <h1>Промышл.<br><span class="orange">альпинист</span><br><span class="outline">арборист</span></h1>
+    <p class="hero-desc">
+      <strong>13 лет на верёвках.</strong> Фасадные работы, спил деревьев там, где техника не пройдёт, подъём негабарита прямо в окно, алмазное бурение, монтаж на высоте. Там, где кран не развернётся — я работаю.
+    </p>
+    <div class="hero-ctas">
+      <a href="tel:0557708200" class="btn-fire">📞 Позвонить</a>
+      <a href="https://www.youtube.com/@vysot-nik4751" target="_blank" class="btn-wire">▶ YouTube-канал</a>
+    </div>
+    <div class="stats-strip">
+      <div class="strip-stat"><span class="sv">13</span><span class="sl">Лет опыта</span></div>
+      <div class="strip-stat"><span class="sv">6-7</span><span class="sl">Лет арбористики</span></div>
+      <div class="strip-stat"><span class="sv">3</span><span class="sl">Языка</span></div>
+      <div class="strip-stat"><span class="sv">∞</span><span class="sl">Высота</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="srv-head reveal">
+      <div>
+        <span class="eyebrow">Что делаю</span>
+        <h2>Работы<br>на <span class="o">высоте</span></h2>
+      </div>
+      <p class="s-desc">Там, где обычные методы не работают — верёвочный доступ решает задачу быстрее и дешевле, чем леса или кран.</p>
+    </div>
+    <div class="srv-grid reveal">
+      <div class="srv" data-num="01">
+        <span class="srv-icon">🏗</span>
+        <h3>Фасадные работы</h3>
+        <p>Покраска, герметизация, ремонт фасадов на любой высоте без лесов и подъёмников.</p>
+      </div>
+      <div class="srv" data-num="02">
+        <span class="srv-icon">🌳</span>
+        <h3>Арбористика</h3>
+        <p>Спил и обрезка деревьев там, где вышка не подъедет. Аккуратно спустим — ничего не сломаем.</p>
+      </div>
+      <div class="srv" data-num="03">
+        <span class="srv-icon">📦</span>
+        <h3>Подъём негабарита</h3>
+        <p>Не проходит в дверь? Крану не развернуться? Подниму и занесу прямо в окно.</p>
+      </div>
+      <div class="srv" data-num="04">
+        <span class="srv-icon">💎</span>
+        <h3>Алмазное бурение</h3>
+        <p>Сверление отверстий в бетоне алмазным инструментом на любой высоте.</p>
+      </div>
+      <div class="srv" data-num="05">
+        <span class="srv-icon">🔌</span>
+        <h3>Протяжка кабелей</h3>
+        <p>Монтаж и прокладка кабелей, проводов по фасадам и труднодоступным местам.</p>
+      </div>
+      <div class="srv" data-num="06">
+        <span class="srv-icon">🔧</span>
+        <h3>Монтаж и демонтаж</h3>
+        <p>Установка и снятие оборудования, конструкций, вывесок на высоте. Ремонт внешних коммуникаций.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow">О мастере</span>
+        <h2>13 лет<br>на <span class="o">верёвках</span></h2>
+        <div class="quote-block">«Если в дверь не проходит, если крану не разложиться — я закину прямо в окно»</div>
+        <p class="about-text">Работаю на верёвках уже 13 лет в самых разных сферах. Последние 6-7 лет активно занимаюсь арбористикой — там, где дерево на бок не завалить и вышка не подъедет, я работаю в кроне на верёвках, аккуратно спускаю части вниз.</p>
+        <p class="about-text">Профессиональная и точная работа. Есть собственный YouTube-канал с примерами работ — можно посмотреть до звонка.</p>
+        <div class="lang-row">
+          <div class="lang-chip active">Русский</div>
+          <div class="lang-chip active">English</div>
+          <div class="lang-chip active">Español</div>
+          <div class="lang-chip">עברית (учу)</div>
+        </div>
+      </div>
+      <div class="about-feats reveal">
+        <div class="af">
+          <div class="af-icon">🎯</div>
+          <div>
+            <div class="af-title">Точность работы</div>
+            <div class="af-desc">Профессиональный верёвочный доступ — ювелирная точность там, где другие методы невозможны.</div>
+          </div>
+        </div>
+        <div class="af">
+          <div class="af-icon">💰</div>
+          <div>
+            <div class="af-title">Дешевле лесов и крана</div>
+            <div class="af-desc">Верёвочный доступ часто в разы дешевле строительных лесов или аренды подъёмника.</div>
+          </div>
+        </div>
+        <div class="af">
+          <div class="af-icon">🌲</div>
+          <div>
+            <div class="af-title">Арборист в кроне</div>
+            <div class="af-desc">Работаю непосредственно в кроне дерева — спиливаю части и аккуратно спускаю вниз на верёвках.</div>
+          </div>
+        </div>
+        <div class="af">
+          <div class="af-icon">📹</div>
+          <div>
+            <div class="af-title">Работы на YouTube</div>
+            <div class="af-desc">Смотрите реальные примеры работ на канале @vysot-nik4751 до того, как позвонить.</div>
+          </div>
+        </div>
+        <div class="af">
+          <div class="af-icon">🗣</div>
+          <div>
+            <div class="af-title">3 языка</div>
+            <div class="af-desc">Свободно общаюсь на русском, английском и испанском. Иврит в процессе изучения.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="section areas" id="areas">
+  <div class="container">
+    <div class="reveal">
+      <span class="eyebrow">География</span>
+      <h2>Весь <span class="o">Север</span> Израиля</h2>
+      <p class="s-desc">Базируюсь в Кирьят-Биалике. Работаю по всему Северному округу.</p>
+    </div>
+    <div class="areas-chips reveal">
+      <div class="ac main">Кирьят-Биалик</div>
+      <div class="ac main">Хайфа</div>
+      <div class="ac">Кирьят-Ата</div>
+      <div class="ac">Кирьят-Моцкин</div>
+      <div class="ac">Акко</div>
+      <div class="ac">Нагария</div>
+      <div class="ac">Кармиэль</div>
+      <div class="ac">Цфат</div>
+      <div class="ac">Тверия</div>
+      <div class="ac">Афула</div>
+      <div class="ac">Нацерет</div>
+      <div class="ac">Весь Север страны</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Связаться</span>
+        <h2>Позвоните<br>или <span class="o">напишите</span></h2>
+        <p class="c-text">Опишите задачу — скажу, возможно ли сделать верёвочным доступом, примерную стоимость и сроки.</p>
+        <a href="tel:0557708200" class="phone-row">
+          <div class="ph-icon">📞</div>
+          <div>
+            <div class="ph-label">Телефон / WhatsApp</div>
+            <div class="ph-num">055-770-8200</div>
+          </div>
+        </a>
+        <a href="https://www.youtube.com/@vysot-nik4751" target="_blank" class="yt-btn">
+          ▶ &nbsp;YouTube-канал с примерами работ
+        </a>
+      </div>
+      <div class="form-box reveal">
+        <div class="ft">Оставить заявку</div>
+        <div class="fsub">Перезвоню и обсудим детали задачи.</div>
+        <form onsubmit="handleSubmit(event)">
+          <div class="fg">
+            <label>Имя</label>
+            <input type="text" name="name" placeholder="Ваше имя" required>
+          </div>
+          <div class="fg">
+            <label>Телефон</label>
+            <input type="tel" name="phone" placeholder="05X-XXX-XXXX" required>
+          </div>
+          <div class="fg">
+            <label>Вид работ</label>
+            <select name="service">
+              <option value="">Выберите</option>
+              <option>Фасадные работы</option>
+              <option>Арбористика / спил деревьев</option>
+              <option>Подъём негабарита</option>
+              <option>Алмазное бурение</option>
+              <option>Протяжка кабелей</option>
+              <option>Монтаж / демонтаж на высоте</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label>Город</label>
+            <input type="text" name="city" placeholder="Хайфа, Акко, Нагария…">
+          </div>
+          <div class="fg">
+            <label>Описание задачи</label>
+            <textarea name="desc" placeholder="Опишите задачу: высота, объём, сроки…"></textarea>
+          </div>
+          <button type="submit" class="submit">Отправить заявку</button>
+          <div class="fnote">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="#" class="logo">Vysot<span>-</span>Nik</a>
+    <div>Кирьят-Биалик · Север Израиля · <a href="tel:0557708200">055-770-8200</a> · <a href="https://www.youtube.com/@vysot-nik4751" target="_blank">YouTube</a></div>
+    <div style="margin-top:10px;font-size:11px;opacity:.35">© 2026 · Промышленный альпинист и арборист</div>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+  function handleSubmit(e) {
+    e.preventDefault();
+    const name = e.target.name.value;
+    alert(`Спасибо, ${name}! Заявка принята. Специалист свяжется с вами в ближайшее время.`);
+    e.target.reset();
+  }
+</script>
+</body>
+</html>
